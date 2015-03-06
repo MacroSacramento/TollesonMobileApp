@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- <item name="android:actionBarStyle">@style/ActionBar.Solid.TUHS</item> -->
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="android:actionBarWidgetTheme">@null</item>
+
+        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+        <item name="colorPrimary">#ffbe901c</item>
+    </style>
+
+</resources>

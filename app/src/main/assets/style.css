@@ -1,0 +1,57 @@
+hr {
+	display: block;
+	height: 1px;
+    border: 0; 
+	border-top: 1px solid #8A0000;
+    margin: 0px; 
+	padding: 0px; 
+}
+	
+
+body{
+	font-size:13px;
+	background-color:#5C0000;
+}
+
+h1{
+	color:white;
+	font-size:150%;
+	font-weight:normal;
+}
+
+.info{
+	border: 1px solid white;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 2px;
+	background-color: #8A0000;
+	box-shadow: 3px 3px 5px gray;
+}
+
+a:link{
+    color: white;
+}
+
+a:visited{
+    color: #E6E9E8;
+}
+
+dt{
+	color:white;
+	font-size:120%;
+	margin-top:15px;
+	margin-bottom: 15px;
+	padding-left:25px;
+	position:relative;
+	cursor:pointer;
+}
+
+dd{
+	font-size:100%;
+	color:white;
+	line-height:1.5;
+	padding:0px 0 0 25px;
+	margin-left: 2%;
+	display:none;
+	margin-bottom: 15px;
+}
