@@ -9,7 +9,7 @@ $(document).ready(function(){
             "select%20*%20from%20csv%20where%20url%3D'"+encodeURIComponent(csvURL)+
             "'%20and%20columns%3D'question%2Canswer'&format=json&callback=?";
 
-    $.getJSON(yqlURL,function(msg){
+        $.getJSON(yqlURL,function(msg){
 
         var dl = $('<dl>');
 
@@ -25,12 +25,12 @@ $(document).ready(function(){
             // Formatting the FAQ as a definition list: dt for the question
             // and a dd for the answer.
 
-            dl.append('<dt><span class="icon"></span>'+
-            question+'</dt><dd>'+answer+'</dd>');
+            dl.append('<div class="info"><dt><span class="icon"></span>'+
+            question+'</dt><dd>'+answer+'</dd></div>');
         });
 
         // Appending the definition list:
-        $('#faqSection').append(dl);
+        $('#info').append(dl);
 
         $('dt').live('click',function(){
             var dd = $(this).next();

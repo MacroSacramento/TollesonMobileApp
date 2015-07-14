@@ -76,11 +76,18 @@ public class MainActivity extends ActionBarActivity
             case 4:
                 fragment = new AboutFragment();
                 break;
+            case 5:
+                fragment = new FacebookFragment();
         }
 
+        fragChanger(fragment);
+
+    }
+
+    public void fragChanger(Fragment frag){
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
+                .replace(R.id.container, frag)
                 .commit();
     }
 
@@ -100,6 +107,9 @@ public class MainActivity extends ActionBarActivity
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
+                break;
+            case 6:
+                mTitle = getString(R.string.title_section6);
         }
     }
 
@@ -136,6 +146,46 @@ public class MainActivity extends ActionBarActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void setContentView(View view) {
+        mTitle = getString(R.string.title_section2);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(mTitle);
+        Fragment fragment = new LunchFragment();
+        fragChanger(fragment);
+    }
+
+    public void setEventView(View view) {
+        mTitle = getString(R.string.title_section3);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(mTitle);
+        Fragment fragment = new EventsFragment();
+        fragChanger(fragment);
+    }
+
+    public void setTeacherView(View view) {
+        mTitle = getString(R.string.title_section4);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(mTitle);
+        Fragment fragment = new TeacherFragment();
+        fragChanger(fragment);
+    }
+
+    public void setAboutView(View view) {
+        mTitle = getString(R.string.title_section5);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(mTitle);
+        Fragment fragment = new AboutFragment();
+        fragChanger(fragment);
+    }
+
+    public void setFacebookView(View view) {
+        mTitle = getString(R.string.title_section6);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(mTitle);
+        Fragment fragment = new FacebookFragment();
+        fragChanger(fragment);
     }
 
     public class NewWebViewClient extends WebViewClient {

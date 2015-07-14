@@ -7,27 +7,71 @@
     tools:context=".MainActivity$PlaceholderFragment"
     android:background="#ff5c0000">
 
-    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <WebView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="150dip"
         android:id="@+id/main_webView"
         android:background="#ff5c0000"
-        android:layout_alignTop="@+id/section_label"
+        android:numColumns="2"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Remember: This Application requires an active internet connection for obtaining and displaying information. If you are unable to see any content please check your internet connection."
-        android:id="@+id/textView"
-        android:layout_below="@+id/main_webView"
-        android:layout_toRightOf="@+id/section_label"
-        android:layout_toEndOf="@+id/section_label"
-        android:textColor="#ffffffff" />
+    <ImageButton
+        android:layout_width="161.5dip"
+        android:layout_height="92dip"
+        android:id="@+id/imageButton"
+        android:background="@drawable/btnlunch"
+        android:onClick="setContentView"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/lunch"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="10dip" />
 
+    <ImageButton
+        android:layout_width="161.5dip"
+        android:layout_height="92dip"
+        android:id="@+id/imageButton2"
+        android:background="@drawable/btnevents"
+        android:onClick="setEventView"
+        android:contentDescription="@string/Events"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dip" />
+
+    <ImageButton
+        android:layout_width="161.5dip"
+        android:layout_height="92dip"
+        android:id="@+id/imageButton3"
+        android:background="@drawable/btnteacher"
+        android:onClick="setTeacherView"
+        android:contentDescription="@string/Teacher"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dip" />
+
+    <ImageButton
+        android:layout_width="161.5dip"
+        android:layout_height="92dip"
+        android:id="@+id/imageButton4"
+        android:onClick="setAboutView"
+        android:layout_alignTop="@+id/imageButton3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/btnabout"
+        android:contentDescription="@string/About" />
+
+    <ImageButton
+        android:layout_width="250dip"
+        android:layout_height="92dip"
+        android:id="@+id/imageButton5"
+        android:onClick="setFacebookView"
+        android:background="@drawable/btntuhsfacebook"
+        android:layout_below="@+id/imageButton3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
 
 </RelativeLayout>
